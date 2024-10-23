@@ -1,0 +1,702 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*VARIABLES CSS*/
+:root {
+  /* Colores */
+  /*Color modo HSL
+  (tono,saturacion,luminosidad)
+  (hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+
+  /*Fuente y Tipografia*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  
+}
+
+/*Tipografia responsiva*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*Base*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  position:relative;
+  
+  
+}
+/*footer*/
+footer{
+  margin:0;
+  background-color: #e97d7d;
+  display: flex;
+  padding: 0 5%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  
+}
+.logo-footer{
+  width: 100px;
+}
+
+footer div {
+  
+  margin: 30px 20px;
+}
+
+footer h3 {
+  
+  margin-bottom: 5px;
+  color: white;
+  
+}
+
+footer h3 img{
+  width: 2em; 
+  height: auto; 
+  vertical-align: middle; 
+  margin-right: 1px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0; 
+  margin-left: 50px;
+ 
+}
+
+footer ul li {
+  margin-bottom: 5px;
+
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(197, 45, 177);
+  display: block;
+  
+  
+  
+}
+
+footer a:hover {
+  text-decoration: underline;
+} 
+
+.footer-conteiner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width:768px)
+{.footer-conteiner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ footer ul li {
+  
+  text-align: center;
+
+}
+}
+
+
+
+
+
+/*≈=========================================*/    
+/*==========SECCIONES DE LA PAGINA==========*/
+/*≈=========================================*/  
+
+
+
+/*navegador*/
+
+main{
+  padding:15px;
+  margin-top:100px;
+  
+  
+  
+}
+nav{
+
+  position:fixed;
+  z-index:10;
+  left:0;
+  right:0;
+  top:0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 5%;
+  height:100px;
+  background-color: #FF9393;
+  
+  
+}
+nav .logo{
+    float:left;
+    width:40%;
+    height:100%;
+    display: block;
+    align-items: center;
+    font-weight:24px;
+    color: #FFFFFF;
+    font-weight:bold ;
+    text-transform: uppercase;
+    
+    
+}
+nav .lista{
+  float:right;
+  padding:0;
+  margin:0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+nav .lista li{
+    list-style: none;
+
+}
+nav .lista a{
+  display:block;
+  text-transform: uppercase;
+  padding:15px;
+  font-size:16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-decoration: none;
+  
+}
+
+nav .lista a:hover{
+  border-bottom: 4px solid #FF0000;
+}
+
+#toggle{
+  position:absolute;
+  top:-100px;
+  
+}
+
+nav .barra-iconos{
+  display:none;
+  position:absolute;
+  right:5%;
+  top:50%;
+  transform:translateY(-50%);
+  
+}
+
+nav .barra-iconos .linea{
+  width: 30px;
+  height: 5px;
+  background: #FFFFFF;
+  margin:5px;
+  border-radius:3px;
+  transition: all .3s ease;
+  
+  
+}
+.logo img{
+  
+  height:100px;
+}
+
+
+
+
+
+
+
+
+
+/* adoptenos */
+
+.post{
+    width: 100%;
+    max-width: 80rem;
+    padding: 50px;
+    background-color: #3E3D58;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
+    display: flex;
+    border-radius: 2rem;
+    margin:auto;
+    
+}
+.img{
+  
+    min-width: 40rem;
+    max-width: 25rem;
+    height: 30rem;
+   /* transform: translateX(-8rem);
+    position: relative;*/
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2rem;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #fff;
+}
+
+.titulo{
+    font-size: 2.5rem;
+    margin: 1rem 0 1rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    place-items: center;
+}
+
+.fecha{
+    display:none;
+    color: rgba(0, 0, 0, .5);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: .5rem 0 1rem;
+}
+
+.descripcion{
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn{
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+    color: #ECF0F1;
+    float: right;
+    padding: 12px;
+    border: 0;
+    background: #525EE1;
+    
+    background-image:url(/img/patitas.png);
+    background-size: cover;
+
+    border-radius: 40px;
+    cursor:pointer ;
+    transition:.5s, color .10s;
+}
+
+
+
+
+
+/*tarjetas animalitos*/
+
+
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+  margin-bottom:80px;
+
+  
+  
+}
+
+.card__container{
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+
+
+.card__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+  
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+
+
+/*≈=========================================*/
+
+
+
+  
+
+
+
+
+
+/*≈=========================================*/    
+/*================ANIMACIONES===============*/
+/*≈=========================================*/  
+
+
+
+
+/* animación hover*/
+
+.btn:hover{
+  background-image:url(/img/patitas.png) ;
+  background-size:cover;
+  transform:Scale3d(1.1,1.1, .3);
+  background: #F2FF0B;
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+
+
+
+
+
+
+/* animacion */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+/*≈=========================================*/    
+
+
+
+
+
+
+/*≈=========================================*/    
+/*=======PARTE RESPONSIVA DE LA PAGINA======*/
+/*≈=========================================*/  
+
+
+
+/*Tarjetas animalitos*/
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100%;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+/*'adoptenos'*/
+
+@media screen and (max-width: 1068px){
+    .post{
+        max-width: 80rem;
+    }
+    .img{
+        min-width: 30rem;
+        max-width: 30rem;
+    }
+}
+
+@media screen and (max-width: 868px){
+    .post{
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .post{
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+    .img{
+        min-width: 100%;
+        max-width: 100%;
+        transform: translate(0, -8rem);
+    }
+    .btn{
+      
+      color:#000000;
+    }
+
+/*barra de navavegacion*/
+
+@media(max-width:768px){
+  nav .logo {
+    float:none;
+    width: auto;
+    justify-content:center; 
+
+  }
+  nav .lista {
+    float:none;
+    position:fixed;
+    z-index:9;
+    left:0;
+    right:0;
+    top:100px;
+    bottom:100%;
+    width: auto;
+    height: auto;
+    flex-direction:column;
+    justify-content:space-between;
+    background-color:rgba(188, 96, 96, 0.52);
+    overflow:hidden;
+    transition: all .5s ease-in-out;
+  }
+  
+  nav .lista a{
+    font-size:20px;
+    
+  }
+  nav :checked ~ .lista {
+    bottom:0;
+    
+  }
+  nav .barra-iconos{
+    display:block;
+  }
+  main{
+    z-index:8;
+    margin-top:200px;
+  }
+}
+
+/*≈=========================================*/    
+    
+ 
+ 
+ 
+ 
+    
+/* Intento de botoncito xd*/
+}
+.ver-mas{
+  display:flex;
+  margin:auto;
+  text-align: center;
+  justify-content:center;
+  place-items:center;
+  font-size:14px;
+  width:180px;
+  height:52px ;
+  text-transform: uppercase;
+  background: #FF7C7C;
+  color: red;
+  margin: o auto;
+  border-radius:30px;
+  transition: all .3s ease-out;
+}
+.ver-mas:hover{
+  background-color:#B63A3A;
+  color:inherit;
+}
+
+
+
+/*======================*/
+
+
+
+/*Formas de colaborar*/
+
+.item-patita{
+  width: 2em; 
+  height: auto; 
+  vertical-align: middle; 
+  margin-right: 1px;
+}
+
+.Formas-colaboracion{
+  color: rgb(186, 89, 235);
+  font-size: 25px;
+  
+}
+
+.ofrece-hogar{
+  font-size: 20px;
+  margin-left: 30px;
+
+}
+
+h2{
+  color: rgb(235, 70, 221);
+  font-size: 20px;
+}
+h3{
+  color: rgb(235, 70, 221);
+}
+
+ul{
+  margin-left: 30px;
+  list-style: none;
+}
+ul li{
+  font-size: 18px;  
+}
+.difusion{
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+strong{
+  color: rgb(186, 89, 235);
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.agradecimiento{
+  padding-bottom: 30px;
+  text-align: center;
+}
